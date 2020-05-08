@@ -7,18 +7,13 @@ namespace EulerCore2
     {
         static void Main(string[] args)
         {
-            // Stopwatch sw = new Stopwatch();
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            
-            Console.WriteLine("Hello World!");
-            
-            sw.Stop();
-            Console.WriteLine("Time Elapsed: {0} seconds", sw.Elapsed.TotalSeconds);
+
+            Mult3And5.Solve();
+
+            Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds",
+                sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
         }
-    }
-    interface IPuzzle
-    {
-        void Solve();
     }
 }
