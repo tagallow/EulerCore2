@@ -8,8 +8,8 @@
             "args": [
                 "build",
                 "${workspaceFolder}/EulerCore2.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/property:GenerateFullPaths=true"
+                // "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         }
