@@ -10,10 +10,12 @@ namespace EulerCore2
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            LargestPalindrome.Solve();
+            SumSquareDifference.Solve();
 
             Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds",
                 sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
+
+            sw.Reset();
         }
     }
 }
