@@ -10,6 +10,7 @@ namespace EulerCore2
         {
             return SieveEratosthenes2(max);
         }
+        // from https://brilliant.org/wiki/sieve-of-eratosthenes/
         private static List<int> SieveEratosthenes2(int max)
         {
             bool[] sieve = new bool[max];

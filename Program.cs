@@ -11,12 +11,10 @@ namespace EulerCore2
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            var p = Tools.GetPrimes();
+            Prime10001.Solve();
 
             sw.Stop();
-            Console.WriteLine("sieve2 done, {0} items", p.Count);
-            Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds",
-                sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
+            Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds", sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
 
         }
     }
