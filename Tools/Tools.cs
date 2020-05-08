@@ -13,7 +13,7 @@ namespace EulerCore2
         {
             return SieveEratosthenes(max);
         }
-        public static List<int> SieveEratosthenes(int max)
+        private static List<int> SieveEratosthenes(int max)
         {
             bool[] N = new bool[max];
             for (int i = 0; i < N.Length; i++)
@@ -41,18 +41,18 @@ namespace EulerCore2
             return result;
         }
         #region unused
-        private static int[] GetPrimesFile()
-        {
-            string[] file = File.ReadAllLines(@"Tools\1kprimes.txt")[0].Split(',');
-            int[] primes = Array.ConvertAll(file, int.Parse);
-            return primes;
-        }
-        private static int[] GetPrimes10kFile()
-        {
-            string[] file = File.ReadAllLines(@"Tools\10kprimes.txt")[0].Split(',');
-            int[] primes = Array.ConvertAll(file, int.Parse);
-            return primes;
-        }
+        // private static int[] GetPrimesFile()
+        // {
+        //     string[] file = File.ReadAllLines(@"Tools\1kprimes.txt")[0].Split(',');
+        //     int[] primes = Array.ConvertAll(file, int.Parse);
+        //     return primes;
+        // }
+        // private static int[] GetPrimes10kFile()
+        // {
+        //     string[] file = File.ReadAllLines(@"Tools\10kprimes.txt")[0].Split(',');
+        //     int[] primes = Array.ConvertAll(file, int.Parse);
+        //     return primes;
+        // }
         #endregion
 
     }

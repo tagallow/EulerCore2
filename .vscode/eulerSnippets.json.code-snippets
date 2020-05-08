@@ -14,12 +14,12 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"NewClass": {
-		"prefix": ["nc","newclass"],
-		"body": [
-			"using System.Collections.Specialized;using System;using System.IO;using System.Collections.Generic;using System.Linq;namespace EulerCore2{static class newProblem{public static void Solve(){}}}"
-		],
-		"description": "Create a new class"
-	}
+	// "NewClass": {
+	// 	"prefix": ["nc","newclass"],
+	// 	"body": [
+	// 		"using System.Collections.Specialized;using System;using System.IO;using System.Collections.Generic;using System.Linq;namespace EulerCore2{static class newProblem{public static void Solve(){}}}"
+	// 	],
+	// 	"description": "Create a new class"
+	// }
 
 }

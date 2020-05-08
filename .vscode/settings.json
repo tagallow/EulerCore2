@@ -1,6 +1,7 @@
 {
     "favorites.resources": [
         "Program.cs",
-        "Tools\\Tools.cs"
+        "Tools\\Tools.cs",
+        "Tools\\Template.cs"
     ]
 }

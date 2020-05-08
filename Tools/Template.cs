@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
 using System.Linq;
+
+/* 
+    https://projecteuler.net/problem=1  */
+
+
 namespace EulerCore2
 {
     static class newProblem
