@@ -18,7 +18,8 @@ namespace EulerCore2
             long sum = 0;
             int sieveMax = 2000003;
             List<int> primes = Tools.GetPrimes(sieveMax);
-            foreach(int n in primes){
+            foreach (int n in primes)
+            {
                 sum += n;
             }
             Console.WriteLine("Solution: {0}", sum);
