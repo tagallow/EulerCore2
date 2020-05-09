@@ -11,35 +11,49 @@ namespace EulerCore2
 {
     static class HighlyDivisibleTriangularNumber
     {
-        static List<long> TriangleNumbers;
-        static int i;
-        static List<int> primes;
+        // static List<long> TriangleNumbers;
+        static int currentIndex;
+        static long currentTriNumber;
         public static void Solve()
         {
-            primes = Tools.GetPrimes();
-            i = 0;
-            TriangleNumbers = new List<long>();
+            // var x = getFactorCount(28);
+            currentIndex = 0;
+            currentTriNumber = 1;
+            // TriangleNumbers = new List<long>();
+            // TriangleNumbers.Add(currentTriNumber);
+            long factorCount = 0;
+            while (factorCount < 500)
+            {
+                getNextTriNum();
+                factorCount = getFactorCount(currentTriNumber);
+            }
 
-
-            Console.WriteLine("Solution: {0}", 0);
+            Console.WriteLine("Solution: {0}", currentTriNumber);
         }
 
         static void getNextTriNum()
         {
-            i++;
+            currentIndex++;
             long sum = 0;
-            for (int j = 1; i <= i + 1;j++)
+            for (int j = 1; j <= currentIndex; j++)
             {
-                sum += i;
+                sum += j;
             }
-            TriangleNumbers.Add(sum);
+            currentTriNumber = sum;
+            // TriangleNumbers.Add(currentTriNumber);
         }
         static int getFactorCount(long n)
         {
             List<int> factors = new List<int>();
-            
 
-            return 0;
+            for (int j = 1; j <= n; j++)
+            {
+                if (n % j == 0)
+                {
+                    factors.Add(j);
+                }
+            }
+            return factors.Count;
         }
     }
 }

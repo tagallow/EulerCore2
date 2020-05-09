@@ -10,7 +10,7 @@ namespace EulerCore2
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-
+            // Mult3And5.Solve();
             HighlyDivisibleTriangularNumber.Solve();
 
             sw.Stop();
