@@ -1,7 +1,8 @@
 {
     "favorites.resources": [
         "Program.cs",
-        "Tools\\Tools.cs",
-        "Tools\\Template.cs"
+        "Tools/Tools.cs",
+        "Tools/Template.cs",
+        ".vscode/settings.json"
     ]
 }

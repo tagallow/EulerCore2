@@ -11,11 +11,14 @@ namespace EulerCore2
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            Prime10001.Solve();
+            SumOfPrimes.Solve();
 
             sw.Stop();
             Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds", sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
 
+            // sw.Restart();
+            // sw.Stop();
+            // Console.WriteLine("Time Elapsed: {0:n0} minutes {1:n0} seconds {2:n0} milliseconds", sw.Elapsed.Minutes, sw.Elapsed.Seconds, sw.Elapsed.Milliseconds);
         }
     }
 }
