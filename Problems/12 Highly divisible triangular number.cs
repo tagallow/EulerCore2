@@ -11,65 +11,78 @@ namespace EulerCore2
 {
     static class HighlyDivisibleTriangularNumber
     {
-        // static List<long> TriangleNumbers;
-        static int currentIndex;
-        static long currentTriNumber;
         public static void Solve()
         {
-            // var x = getFactorCount(28);
-            currentIndex = 0;
-            currentTriNumber = 1;
-            // TriangleNumbers = new List<long>();
-            // TriangleNumbers.Add(currentTriNumber);
-            long factorCount = 0;
+            int currentIndex = 0;
+            long currentTriNumber = 1;
+            int factorCount = 0;
+
             while (factorCount < 500)
             {
-                getNextTriNum();
-                factorCount = getFactorCount(currentTriNumber);
+                currentIndex++;
+                currentTriNumber = getNextTriNum(currentIndex);
+                factorCount = getFactorCount3(currentTriNumber);
             }
 
             Console.WriteLine("Solution: {0}", currentTriNumber);
         }
 
-        static void getNextTriNum()
+        static long getNextTriNum(int currentIndex)
         {
-            currentIndex++;
             long sum = 0;
             for (int j = 1; j <= currentIndex; j++)
             {
                 sum += j;
             }
-            currentTriNumber = sum;
-            // TriangleNumbers.Add(currentTriNumber);
+            return sum;
+        }
+        public static int getFactorCount3(long n)
+        {
+            int count = 2;
+            for (int i = 2; i < Math.Sqrt(n); i++)
+            {
+                if (n % i == 0)
+                {
+                    count++;
+                    if (Math.Pow(i, 2) != n)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+        static int getFactorCountFast(long n)
+        {
+            List<int> primes = Tools.GetPrimes();
+            int count = 1;
+
+            for (int j = 0; j <= n / 2; j++)
+            {
+                if (n % primes[j] == 0)
+                {
+                    count++;
+                }
+            }
+            int totalSum = 1;
+            for (int j = 0; j < count; j++)
+            {
+                totalSum *= (count + 1);
+            }
+            return totalSum;
         }
         static int getFactorCount(long n)
         {
-            List<int> factors = new List<int>();
+            int count = 1;
 
-            for (int j = 1; j <= n; j++)
+            for (long j = 1; j <= n / 2; j++)
             {
                 if (n % j == 0)
                 {
-                    factors.Add(j);
+                    count++;
                 }
             }
-            return factors.Count;
+            return count;
         }
     }
 }
-
-// public static List<long> GetTriNums()
-// {
-//     List<long> result = new List<long>();
-//     long tempSum;
-//     for (int i = 1; i < int.MaxValue/2; i++)
-//     {
-//         tempSum = 0;
-//         for (int j = 1; j <= i; j++)
-//         {
-//             tempSum += j;
-//         }
-//         result.Add(tempSum);
-//     }
-//     return result;
-// }
